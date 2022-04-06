@@ -8,6 +8,7 @@ export const provider2 = new firebase.auth.GithubAuthProvider();
 const firebaseConfig = { // Have the firebase config here
   apiKey: "AIzaSyCjDNZRMwDugaxLruS1kTUOwEIGu98Bp2s",
   authDomain: "tallerjfbdofkau.firebaseapp.com",
+  databaseURL: "https://tallerjfbdofkau-default-rtdb.firebaseio.com",
   projectId: "tallerjfbdofkau",
   storageBucket: "tallerjfbdofkau.appspot.com",
   messagingSenderId: "289922575688",
@@ -19,7 +20,7 @@ const firebaseConfig = { // Have the firebase config here
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 // Use these for db & auth
-const db = firebaseApp.firestore();
+const db = firebaseApp.database;
 const auth = firebase.auth();
 
 export { auth, db , firebaseConfig};
